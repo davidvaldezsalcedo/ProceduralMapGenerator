@@ -28,3 +28,22 @@ It creates a procedural map and mesh. Included is a procedural spawner for playe
 
 ## Spawner Set Up
 
+**1.** Create two empty game objects, one for the Player Spawner and one for the Enemy Spawner (**NOTE:** other empty game objects can be added for use to spawn pick ups or other objects)
+
+**2.** Drag the PlayerSpawner script located in /ProceduralMapGeneration/ProceduralSpawner and drop it into the Player Spawner object and give it a Player prefab
+
+**3.** Drag the GenericObjectSpawner script located in /ProceduralMapGeneration/ProceduralSpawner and drop it into the Enemy Spawner object and give it an Enemy prefab (this also applies to any other enemies or pick ups created).
+
+**4.** you should be able to spawn objects now.
+
+
+## Aditional Notes
+
+**You can enable using a navmesh by adding the Navmesh Components for your Unity version and uncommenting it in the Map Generator Script in the Awake function and uncommenting the using UnityEngine.AI in the script.**
+
+**You can then add the Navmesh Bake script located in the /ProceduralMapGeneration folder to the Map Generator object and give it a navmesh surface component to bake on awake**
+
+**NOTE: if you would not like to use this spawner, you can comment out or delete lines 121 to 126 in the MapGenerator script**
+
+
+
