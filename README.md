@@ -1,5 +1,5 @@
 # ProceduralMapGenerator
-It creates a procedural map and mesh. Included is a procedural spawner for players, enemies, and Pickups as well as a navmesh bake on awake script.
+It creates a procedural map and mesh for dungeon crawlers. Included is a procedural spawner for players, enemies, and Pickups as well as a navmesh bake on awake script.
 
 
 ## HowTo
@@ -37,6 +37,25 @@ It creates a procedural map and mesh. Included is a procedural spawner for playe
 **4.** you should be able to spawn objects now.
 
 
+## Tweaking Settings
+
+You can use this as a 2d or 3d map generator by ticking on the Is 2D bool variable in the inspector for the Mesh Generator script.
+
+You can set the size of the map by setting its Width and Height in the inspector
+
+The Smooth Pass Max changes how smooth the map will be, if set to 0 it will contain pillars in halls and edges
+
+The passage radius will define how thick the halls will be
+
+The Seed is what defines the maps outline, this is done by strings, so defining it as "Hello World" will give you a different map as "Hello Everyone"
+
+You can use the Use Random Seed to have it select a random map for you
+
+Random Fill Percent will set how empty or how full the map is
+
+Wall and Cave tile amounts define the tiling of the textures used
+
+
 ## Aditional Notes
 
 **You can enable using a navmesh by adding the Navmesh Components for your Unity version and uncommenting it in the Map Generator Script in the Awake function and uncommenting the using UnityEngine.AI in the script.**
@@ -44,6 +63,11 @@ It creates a procedural map and mesh. Included is a procedural spawner for playe
 **You can then add the Navmesh Bake script located in the /ProceduralMapGeneration folder to the Map Generator object and give it a navmesh surface component to bake on awake**
 
 **NOTE: if you would not like to use this spawner, you can comment out or delete lines 121 to 126 in the MapGenerator script**
+
+
+### Known Bugs
+
+The UVs on the Z axis for the textures seem to be streched, this still needs to be fixed.
 
 
 
